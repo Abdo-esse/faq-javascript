@@ -38,14 +38,15 @@ const faqData = [
 ];
 
 
+
 // Fonction pour rendre les questions et réponses en HTML
 function renderFAQ(faqData) {
     const faqContainer = document.querySelector('.faq');
-    
+    faqContainer.innerHTML=``
     faqData.forEach(item => {
-        // if (item.question==''||item.answer==''||item.status=="closed") {
-        //     return true
-        // }
+        if (item.question==''||item.answer==''||item.status=="closed") {
+            return 
+        }
         
             const faqItem = document.createElement('div');
 

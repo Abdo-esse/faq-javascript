@@ -11,19 +11,41 @@ const questionCount = document.getElementById("questionCount");
 //Add new question/answer form
 const form = document.getElementById('addQuestionForm');
 
+//count Id
+let countId = 6;
+console.log(questionText);
+       console.log(correctAnswer);
 
-function addNewQuestion(questionText, correctAnswer) {
-    
+function addNewQuestion() {
+   
+  
     // Function body to be implemented 
     form.addEventListener('submit', (e) => {
        
-        
+        console.log('azertyuio');
+       e.preventDefault()
+       console.log(questionText);
+       console.log(correctAnswer);
+       
+       
+       countId++
+       let data={
+       id:countId,
+       status:"open",
+       question: questionText.value,
+       answer:  correctAnswer.value
+   }
+   console.log(data);
+      faqData.push(data)
+   console.log(faqData);
 
+   renderFAQ(faqData)
+     
     });
-   
+    
 }
 
-
+addNewQuestion()
 
 
 function displayQuestionCount() {
