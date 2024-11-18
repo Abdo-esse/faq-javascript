@@ -41,8 +41,13 @@ const faqData = [
 // Fonction pour rendre les questions et réponses en HTML
 function renderFAQ(faqData) {
     const faqContainer = document.querySelector('.faq');
+    
     faqData.forEach(item => {
-        const faqItem = document.createElement('div');
+        // if (item.question==''||item.answer==''||item.status=="closed") {
+        //     return true
+        // }
+        
+            const faqItem = document.createElement('div');
 
         faqItem.classList.add('faq-item');
 
@@ -63,8 +68,10 @@ function renderFAQ(faqData) {
         });
 
         faqContainer.appendChild(faqItem);
+    
     });
 }
+
 
 // Appel de la fonction pour afficher les FAQ lors du chargement de la page
 document.addEventListener('DOMContentLoaded', function () {
