@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Foire aux Questions (FAQ)</h1>
+        <div class="section-action">
+            <div id="questionCount">Nombre de questions : 0</div>
+            <button id="addQuestionBtn">Ajouter une question</button>
+        </div>
+        <div class="faq">
+            <!-- <div class="faq-item">
+                <button class="faq-question">Question 1 : Comment puis-je réserver une chambre d'hôtel ?</button>
+                <div class="faq-answer">
+                    <p>Pour réserver une chambre d'hôtel, veuillez visiter notre page de réservation, choisir vos dates, sélectionner une chambre et compléter le formulaire de réservation.</p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Modale pour ajouter une nouvelle question -->
+        <div id="addQuestionModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Ajouter une nouvelle question</h2>
+                <form id="addQuestionForm">
+                    <label for="question">Question :</label>
+                    <input type="text" id="question" name="question" required>
+                    <label for="answer">Réponse :</label>
+                    <textarea id="answer" name="answer" required></textarea>
+
+                    <label class="container">Open
+                        <input type="radio" checked="checked" name="staus" value="open">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Closed
+                        <input type="radio" name="staus" value="closed">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <button type="submit">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
