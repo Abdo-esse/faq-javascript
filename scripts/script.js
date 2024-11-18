@@ -42,6 +42,8 @@ const faqData = [
 // Fonction pour rendre les questions et réponses en HTML
 function renderFAQ(faqData) {
     const faqContainer = document.querySelector('.faq');
+    
+    
     faqContainer.innerHTML=``
     faqData.forEach(item => {
         if (item.question==''||item.answer==''||item.status=="closed") {
@@ -67,7 +69,8 @@ function renderFAQ(faqData) {
         faqQuestion.addEventListener('click', function() {
             toggleAnswer(faqQuestion);
         });
-
+          
+        
         faqContainer.appendChild(faqItem);
     
     });
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Ajout des click listeners pour toggle des réponses
 document.addEventListener('DOMContentLoaded', function () {
     var faqItems = document.querySelectorAll('.faq-item');
+
 
     faqItems.forEach(function (item) {
         item.querySelector('.faq-question').addEventListener('click', function () {
@@ -123,3 +127,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+console.log(document.querySelector('.faq'));

@@ -50,9 +50,14 @@ addNewQuestion()
 
 function displayQuestionCount() {
     // Function body to be implemented
-
+    const faqContainerDD = document.querySelector('.faq')
+    console.log(faqContainerDD);
+    var faqItemscc =document.querySelectorAll('.faq-item');
+    console.log(faqItemscc);
+   
+    
 }
-
+displayQuestionCount()
 
 function initializeQuestionList() {
     // Function body to be implemented
