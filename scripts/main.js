@@ -6,15 +6,14 @@ const questionText = document.getElementById('question');
 const correctAnswer = document.getElementById('answer');
 
 //Question count div
-const questionCount = document.getElementById("questionCount");
+const questionCountDiv = document.getElementById("questionCount");
 
 //Add new question/answer form
 const form = document.getElementById('addQuestionForm');
 
 //count Id
 let countId = 6;
-console.log(questionText);
-       console.log(correctAnswer);
+
 
 function addNewQuestion() {
    
@@ -22,10 +21,9 @@ function addNewQuestion() {
     // Function body to be implemented 
     form.addEventListener('submit', (e) => {
        
-        console.log('azertyuio');
+        
        e.preventDefault()
-       console.log(questionText);
-       console.log(correctAnswer);
+       
        
        
        countId++
@@ -40,20 +38,20 @@ function addNewQuestion() {
    console.log(faqData);
 
    renderFAQ(faqData)
-     
+   displayQuestionCount()
     });
     
 }
 
 addNewQuestion()
-
+console.log(faqData);
 
 function displayQuestionCount() {
     // Function body to be implemented
-    const faqContainerDD = document.querySelector('.faq')
-    console.log(faqContainerDD);
-    var faqItemscc =document.querySelectorAll('.faq-item');
-    console.log(faqItemscc);
+    console.log('hdfff');
+    
+  let  questionCount = faqData.filter(item=>item.question!==''&item.answer!==''&item.status=="open")
+  questionCountDiv.textContent=questionCount.length
    
     
 }
